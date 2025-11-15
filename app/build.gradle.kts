@@ -17,6 +17,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Read API key from local.properties (secure way to store API keys)
+        val apiKey = providers.gradleProperty("VIRUSTOTAL_API_KEY").orNull ?: ""
+        buildConfigField("String", "VIRUSTOTAL_API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -37,6 +41,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true  // Enable BuildConfig to access API key
     }
 }
 
@@ -65,6 +70,8 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
+    implementation("com.squareup.moshi:moshi:1.15.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
 
     // Room (runtime + Kotlin extensions)
     implementation("androidx.room:room-runtime:2.6.1")

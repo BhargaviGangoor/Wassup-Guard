@@ -1,4 +1,4 @@
-pluginManagement {
+pluginManagement {   //for plugins
     repositories {
         google {
             content {
@@ -7,7 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
-        mavenCentral()
+        mavenCentral()   //mavenCentral is public repositry
         gradlePluginPortal()
     }
 }
