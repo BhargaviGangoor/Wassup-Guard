@@ -1,13 +1,7 @@
-pluginManagement {   //for plugins
+pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()   //mavenCentral is public repositry
+        google()
+        mavenCentral()
         gradlePluginPortal()
     }
 }
@@ -21,4 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Wassup Guard"
 include(":app")
- 
