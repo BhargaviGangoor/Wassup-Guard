@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.wassupguard.app-mergeDebugResources-52:/values-v21/values-v21.xml",
+            "outputFile": "com.example.wassupguard.app-mergeDebugResources-53:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\abgan\\.gradle\\caches\\8.8\\transforms\\b67601a891fc8b8856d1ace73700b225\\transformed\\core-1.13.1\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\8.13\\transforms\\739112cdf6d37873f7ea92c5ffc2fded\\transformed\\core-1.13.1\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

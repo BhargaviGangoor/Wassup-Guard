@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -52,6 +53,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -145,19 +147,18 @@ fun HomeScreen(
 
 @Composable
 private fun rememberNotificationPermission(): () -> Unit {
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-        var asked by remember { mutableStateOf(false) }
-        val launcher = rememberLauncherForActivityResult(
-            contract = ActivityResultContracts.RequestPermission(),
-            onResult = { asked = true }
-        )
-        {
+    var asked by remember { mutableStateOf(false) }
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission(),
+        onResult = { asked = true }
+    )
+
+    return {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (!asked) {
                 launcher.launch(Manifest.permission.POST_NOTIFICATIONS)
             }
         }
-    } else {
-        { }
     }
 }
 
@@ -168,6 +169,9 @@ private fun HeroCard(
     totalScans: Int,
     modifier: Modifier = Modifier
 ) {
+    val onPrimaryContainerColor = MaterialTheme.colorScheme.onPrimaryContainer
+    val strokeWidthPx = with(LocalDensity.current) { 10.dp.toPx() }
+
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(24.dp),
@@ -187,14 +191,14 @@ private fun HeroCard(
                     Text(
                         text = "Wassup Guard",
                         style = MaterialTheme.typography.titleLarge.copy(
-                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                            color = onPrimaryContainerColor,
                             fontWeight = FontWeight.Bold
                         )
                     )
                     Text(
                         text = friendlyLastScan(lastScanTimestamp),
                         style = MaterialTheme.typography.bodyMedium.copy(
-                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+                            color = onPrimaryContainerColor.copy(alpha = 0.8f)
                         )
                     )
                 }
@@ -204,23 +208,23 @@ private fun HeroCard(
                 ) {
                     Canvas(modifier = Modifier.fillMaxSize()) {
                         drawArc(
-                            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.2f),
+                            color = onPrimaryContainerColor.copy(alpha = 0.2f),
                             startAngle = -90f,
                             sweepAngle = 360f,
                             useCenter = false,
                             style = androidx.compose.ui.graphics.drawscope.Stroke(
-                                width = 10.dp.toPx(),
+                                width = strokeWidthPx,
                                 cap = StrokeCap.Round
                             )
                         )
                         val sweep = if (totalScans == 0) 0f else (threatsDetected / totalScans.toFloat()) * 360f
                         drawArc(
-                            color = MaterialTheme.colorScheme.onPrimaryContainer,
+                            color = onPrimaryContainerColor,
                             startAngle = -90f,
                             sweepAngle = sweep.coerceIn(0f, 360f),
                             useCenter = false,
                             style = androidx.compose.ui.graphics.drawscope.Stroke(
-                                width = 10.dp.toPx(),
+                                width = strokeWidthPx,
                                 cap = StrokeCap.Round
                             )
                         )
@@ -228,7 +232,7 @@ private fun HeroCard(
                     Icon(
                         imageVector = Icons.Rounded.Shield,
                         contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                        tint = onPrimaryContainerColor,
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
@@ -327,7 +331,7 @@ private fun ThreatStatsRow(
 }
 
 @Composable
-private fun StatCard(
+private fun RowScope.StatCard(
     title: String,
     value: String,
     icon: androidx.compose.ui.graphics.vector.ImageVector,
