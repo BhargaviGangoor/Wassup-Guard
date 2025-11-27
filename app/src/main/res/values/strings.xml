@@ -6,4 +6,8 @@
     <string name="notif_scan_complete_text">Scanned %1$d file(s). All files are safe.</string>
     <string name="notif_threat_detected_title">⚠️ Threat Detected!</string>
     <string name="notif_threat_detected_text">Found %1$d malicious file(s). Files have been quarantined.</string>
+    <string name="notif_foreground_title">Monitoring WhatsApp files</string>
+    <string name="notif_foreground_text">Scanning new downloads in real time</string>
+    <string name="notif_foreground_channel_name">File monitoring</string>
+    <string name="notif_foreground_channel_desc">Persistent service that scans WhatsApp media</string>
 </resources>
