@@ -9,6 +9,7 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
+import androidx.work.workDataOf
 import com.example.wassupguard.data.AppDatabase
 import com.example.wassupguard.data.dao.ScanLogDao
 import com.example.wassupguard.data.entity.ScanLog
@@ -31,27 +32,40 @@ data class HomeUiState(
     val statusMessage: String = "Ready",
     val backgroundProtectionEnabled: Boolean = false,
     val isSchedulingScan: Boolean = false,
-    val safetyTips: List<SafetyTip> = emptyList()
+    val safetyTips: List<SafetyTip> = emptyList(),
+    val isFolderSelectionRequired: Boolean = true
 )
 
 class HomeViewModel(
     private val scanLogDao: ScanLogDao,
     private val workManager: WorkManager,
-    private val tipsProvider: SafetyTipsProvider = SafetyTipsProvider()
+    private val tipsProvider: SafetyTipsProvider = SafetyTipsProvider(),
+    private val appContext: Context
 ) : ViewModel() {
 
     private val statusMessage = MutableStateFlow("Ready")
     private val backgroundProtection = MutableStateFlow(false)
     private val scheduling = MutableStateFlow(false)
     private val tipsFlow = MutableStateFlow(tipsProvider.tipsOfTheDay())
+    private val _selectedDirectoryUri = MutableStateFlow<String?>(null)
 
     val uiState: StateFlow<HomeUiState> = combine(
         scanLogDao.observeAll(),
         statusMessage,
         backgroundProtection,
         scheduling,
-        tipsFlow
-    ) { logs, status, backgroundEnabled, schedulingScan, tips ->
+        tipsFlow,
+        _selectedDirectoryUri
+    ) { values ->
+        @Suppress("UNCHECKED_CAST")
+        val logs = values[0] as List<ScanLog>
+        val status = values[1] as String
+        val backgroundEnabled = values[2] as Boolean
+        val schedulingScan = values[3] as Boolean
+        @Suppress("UNCHECKED_CAST")
+        val tips = values[4] as List<SafetyTip>
+        val directoryUri = values[5] as? String
+
         HomeUiState(
             scanLogs = logs.take(MAX_RECENT_LOGS),
             totalScans = logs.size,
@@ -60,7 +74,8 @@ class HomeViewModel(
             statusMessage = status,
             backgroundProtectionEnabled = backgroundEnabled,
             isSchedulingScan = schedulingScan,
-            safetyTips = tips
+            safetyTips = tips,
+            isFolderSelectionRequired = directoryUri == null
         )
     }.stateIn(
         scope = viewModelScope,
@@ -68,10 +83,30 @@ class HomeViewModel(
         initialValue = HomeUiState()
     )
 
+    init {
+        loadSelectedDirectory()
+    }
+
+    private fun loadSelectedDirectory() {
+        val sharedPrefs = appContext.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        _selectedDirectoryUri.value = sharedPrefs.getString("whatsapp_uri", null)
+    }
+
+    fun onDirectorySelected(uri: String) {
+        val sharedPrefs = appContext.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        sharedPrefs.edit().putString("whatsapp_uri", uri).apply()
+        _selectedDirectoryUri.value = uri
+    }
+
     fun runQuickScan() {
         viewModelScope.launch {
+            if (_selectedDirectoryUri.value == null) {
+                statusMessage.value = "Please select a folder first"
+                return@launch
+            }
             scheduling.value = true
             val request = OneTimeWorkRequestBuilder<FileMonitorWorker>()
+                .setInputData(workDataOf("directory_uri" to _selectedDirectoryUri.value))
                 .addTag(MANUAL_SCAN_TAG)
                 .build()
             workManager.enqueueUniqueWork(
@@ -86,14 +121,21 @@ class HomeViewModel(
 
     fun toggleBackgroundProtection(enable: Boolean) {
         viewModelScope.launch {
+            if (enable && _selectedDirectoryUri.value == null) {
+                statusMessage.value = "Please select a folder first"
+                backgroundProtection.value = false // reset toggle
+                return@launch
+            }
+
             backgroundProtection.value = enable
             if (enable) {
                 val periodicRequest = PeriodicWorkRequestBuilder<FileMonitorWorker>(
-                    6, TimeUnit.HOURS
-                ).addTag(BACKGROUND_WORK_TAG).build()
+                    15, TimeUnit.MINUTES
+                ).setInputData(workDataOf("directory_uri" to _selectedDirectoryUri.value))
+                .addTag(BACKGROUND_WORK_TAG).build()
                 workManager.enqueueUniquePeriodicWork(
                     BACKGROUND_WORK_TAG,
-                    ExistingPeriodicWorkPolicy.UPDATE,
+                    ExistingPeriodicWorkPolicy.KEEP,
                     periodicRequest
                 )
                 statusMessage.value = "Background guard armed"
@@ -121,8 +163,8 @@ class HomeViewModelFactory(private val appContext: Context) : ViewModelProvider.
         val workManager = WorkManager.getInstance(appContext)
         return HomeViewModel(
             scanLogDao = database.scanLogDao(),
-            workManager = workManager
+            workManager = workManager,
+            appContext = appContext
         ) as T
     }
 }
-

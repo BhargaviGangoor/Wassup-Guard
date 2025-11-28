@@ -1,59 +1,65 @@
-com.example.wassupguard.app-core-runtime-2.2.0-0 C:\Users\ASUS\.gradle\caches\8.13\transforms\020680d5a5f37c32b909b8c71667f28b\transformed\core-runtime-2.2.0\res
-com.example.wassupguard.app-core-ktx-1.13.1-1 C:\Users\ASUS\.gradle\caches\8.13\transforms\074ae9d06c208b548b0120d8473bc86b\transformed\core-ktx-1.13.1\res
-com.example.wassupguard.app-customview-poolingcontainer-1.0.0-2 C:\Users\ASUS\.gradle\caches\8.13\transforms\1854d123bb105f0bbd6b76b097f49df9\transformed\customview-poolingcontainer-1.0.0\res
-com.example.wassupguard.app-activity-1.9.1-3 C:\Users\ASUS\.gradle\caches\8.13\transforms\2cdfdfdb49e36ac8a77b07db0815134c\transformed\activity-1.9.1\res
-com.example.wassupguard.app-ui-util-release-4 C:\Users\ASUS\.gradle\caches\8.13\transforms\32fc56dccbcbc3c6caedbc7ab16bc040\transformed\ui-util-release\res
-com.example.wassupguard.app-room-runtime-2.6.1-5 C:\Users\ASUS\.gradle\caches\8.13\transforms\3389df71aa2b8aa2430533dd3b2cfab3\transformed\room-runtime-2.6.1\res
-com.example.wassupguard.app-activity-compose-1.9.1-6 C:\Users\ASUS\.gradle\caches\8.13\transforms\3738a4a705d4c0384d9fd73453c11af9\transformed\activity-compose-1.9.1\res
-com.example.wassupguard.app-foundation-release-7 C:\Users\ASUS\.gradle\caches\8.13\transforms\4ee97471da8a5e3233842a83ee7ed6fc\transformed\foundation-release\res
-com.example.wassupguard.app-work-runtime-2.9.0-8 C:\Users\ASUS\.gradle\caches\8.13\transforms\53ee64506954ec1db4e5c372f39bb6a4\transformed\work-runtime-2.9.0\res
-com.example.wassupguard.app-startup-runtime-1.1.1-9 C:\Users\ASUS\.gradle\caches\8.13\transforms\611ba9a90fbd43a399e5041fa78d9a20\transformed\startup-runtime-1.1.1\res
-com.example.wassupguard.app-activity-ktx-1.9.1-10 C:\Users\ASUS\.gradle\caches\8.13\transforms\6155502b3ffd87e28be2e3a8a7fccb45\transformed\activity-ktx-1.9.1\res
-com.example.wassupguard.app-ui-tooling-preview-release-11 C:\Users\ASUS\.gradle\caches\8.13\transforms\6771ec7bd005c4978ee1f6ff4c4dd57b\transformed\ui-tooling-preview-release\res
-com.example.wassupguard.app-savedstate-ktx-1.2.1-12 C:\Users\ASUS\.gradle\caches\8.13\transforms\6d8bb19d9c22a8f2e59a332600e8d95c\transformed\savedstate-ktx-1.2.1\res
-com.example.wassupguard.app-lifecycle-runtime-release-13 C:\Users\ASUS\.gradle\caches\8.13\transforms\6f9870ca4e99ddb7eaba57a62bdd6afa\transformed\lifecycle-runtime-release\res
-com.example.wassupguard.app-lifecycle-viewmodel-release-14 C:\Users\ASUS\.gradle\caches\8.13\transforms\70281f70e50ba4c333d0f1dc5c2d39e9\transformed\lifecycle-viewmodel-release\res
-com.example.wassupguard.app-core-1.13.1-15 C:\Users\ASUS\.gradle\caches\8.13\transforms\739112cdf6d37873f7ea92c5ffc2fded\transformed\core-1.13.1\res
-com.example.wassupguard.app-savedstate-1.2.1-16 C:\Users\ASUS\.gradle\caches\8.13\transforms\73d6c371238b6a98e22c814fb47c7f36\transformed\savedstate-1.2.1\res
-com.example.wassupguard.app-ui-graphics-release-17 C:\Users\ASUS\.gradle\caches\8.13\transforms\7f203929aa6a7fafef0871e9c65eccdf\transformed\ui-graphics-release\res
-com.example.wassupguard.app-animation-core-release-18 C:\Users\ASUS\.gradle\caches\8.13\transforms\7f36e4be18392032a5f59409ba52d3db\transformed\animation-core-release\res
-com.example.wassupguard.app-emoji2-1.3.0-19 C:\Users\ASUS\.gradle\caches\8.13\transforms\81ed7d89a3a1d18d5e1dec60122e7cac\transformed\emoji2-1.3.0\res
-com.example.wassupguard.app-material-icons-core-release-20 C:\Users\ASUS\.gradle\caches\8.13\transforms\83382b21cadd3bb8fabcfe176814df84\transformed\material-icons-core-release\res
-com.example.wassupguard.app-sqlite-2.4.0-21 C:\Users\ASUS\.gradle\caches\8.13\transforms\83423ae10dc800bc376f1d982cf984f6\transformed\sqlite-2.4.0\res
-com.example.wassupguard.app-ui-tooling-data-release-22 C:\Users\ASUS\.gradle\caches\8.13\transforms\85f29642ed5fd1675e1e3119e0efbc50\transformed\ui-tooling-data-release\res
-com.example.wassupguard.app-runtime-release-23 C:\Users\ASUS\.gradle\caches\8.13\transforms\86ba4fc03f28d4358644d5258506d244\transformed\runtime-release\res
-com.example.wassupguard.app-animation-release-24 C:\Users\ASUS\.gradle\caches\8.13\transforms\881553bbf6d30f82003694b5ae51d220\transformed\animation-release\res
-com.example.wassupguard.app-lifecycle-process-2.8.6-25 C:\Users\ASUS\.gradle\caches\8.13\transforms\8da6a9f3ab1758827fa4e8cea24772e0\transformed\lifecycle-process-2.8.6\res
-com.example.wassupguard.app-ui-geometry-release-26 C:\Users\ASUS\.gradle\caches\8.13\transforms\97e4697beaeb467c734b688459c0fabd\transformed\ui-geometry-release\res
-com.example.wassupguard.app-ui-test-manifest-1.6.8-27 C:\Users\ASUS\.gradle\caches\8.13\transforms\9a661dd3cf43091b9ad0ffd1ebe4a38e\transformed\ui-test-manifest-1.6.8\res
-com.example.wassupguard.app-lifecycle-runtime-compose-release-28 C:\Users\ASUS\.gradle\caches\8.13\transforms\9c0c89192bba10978d9dc2c64066099e\transformed\lifecycle-runtime-compose-release\res
-com.example.wassupguard.app-ui-unit-release-29 C:\Users\ASUS\.gradle\caches\8.13\transforms\a05aa88cedf11b32e91cd5a4958657de\transformed\ui-unit-release\res
-com.example.wassupguard.app-lifecycle-livedata-core-2.8.6-30 C:\Users\ASUS\.gradle\caches\8.13\transforms\a1bb775c7a10bb38e473e14872fb22c5\transformed\lifecycle-livedata-core-2.8.6\res
-com.example.wassupguard.app-material-release-31 C:\Users\ASUS\.gradle\caches\8.13\transforms\a31416fe4712b3b8d5a94521f4a4e970\transformed\material-release\res
-com.example.wassupguard.app-foundation-layout-release-32 C:\Users\ASUS\.gradle\caches\8.13\transforms\a49eaad96c9c315dd9ee7f86fdb575e8\transformed\foundation-layout-release\res
-com.example.wassupguard.app-lifecycle-runtime-ktx-release-33 C:\Users\ASUS\.gradle\caches\8.13\transforms\aa1f8de1badd515aa72caeda959c5bcc\transformed\lifecycle-runtime-ktx-release\res
-com.example.wassupguard.app-ui-tooling-release-34 C:\Users\ASUS\.gradle\caches\8.13\transforms\acb4fb17d3262754bde764b7ebb6bd2d\transformed\ui-tooling-release\res
-com.example.wassupguard.app-work-runtime-ktx-2.9.0-35 C:\Users\ASUS\.gradle\caches\8.13\transforms\c72cb2e803c794a1f1464afec975cb1e\transformed\work-runtime-ktx-2.9.0\res
-com.example.wassupguard.app-annotation-experimental-1.4.1-36 C:\Users\ASUS\.gradle\caches\8.13\transforms\c7e4aa721794c2783b946ce9730d688d\transformed\annotation-experimental-1.4.1\res
-com.example.wassupguard.app-sqlite-framework-2.4.0-37 C:\Users\ASUS\.gradle\caches\8.13\transforms\cd4470a18ba1bb68f48cb2574323fa67\transformed\sqlite-framework-2.4.0\res
-com.example.wassupguard.app-material3-release-38 C:\Users\ASUS\.gradle\caches\8.13\transforms\cebfdc37c650550eb3a8ce8e5d78d273\transformed\material3-release\res
-com.example.wassupguard.app-lifecycle-viewmodel-ktx-2.8.6-39 C:\Users\ASUS\.gradle\caches\8.13\transforms\d5cdcfce649295a2077defac8fb06559\transformed\lifecycle-viewmodel-ktx-2.8.6\res
-com.example.wassupguard.app-lifecycle-livedata-core-ktx-2.8.6-40 C:\Users\ASUS\.gradle\caches\8.13\transforms\da09ffdf7fd37f17e02422e74db3494a\transformed\lifecycle-livedata-core-ktx-2.8.6\res
-com.example.wassupguard.app-profileinstaller-1.3.1-41 C:\Users\ASUS\.gradle\caches\8.13\transforms\df4a074f542fdc3824af47a8ce64b3d2\transformed\profileinstaller-1.3.1\res
-com.example.wassupguard.app-lifecycle-service-2.8.6-42 C:\Users\ASUS\.gradle\caches\8.13\transforms\e400f44f9fbfa4a5547d2f5f0615b7c8\transformed\lifecycle-service-2.8.6\res
-com.example.wassupguard.app-runtime-saveable-release-43 C:\Users\ASUS\.gradle\caches\8.13\transforms\e5d2b825f6672a8f303f9e1bb6650042\transformed\runtime-saveable-release\res
-com.example.wassupguard.app-lifecycle-livedata-2.8.6-44 C:\Users\ASUS\.gradle\caches\8.13\transforms\ea4a9454a94c4c00a82d616af0dd831a\transformed\lifecycle-livedata-2.8.6\res
-com.example.wassupguard.app-material-ripple-release-45 C:\Users\ASUS\.gradle\caches\8.13\transforms\ec394bcbdecb12e91b73d9a941e1cd0c\transformed\material-ripple-release\res
-com.example.wassupguard.app-room-ktx-2.6.1-46 C:\Users\ASUS\.gradle\caches\8.13\transforms\efcd3b8224d1e844acb742435b36067c\transformed\room-ktx-2.6.1\res
-com.example.wassupguard.app-lifecycle-viewmodel-savedstate-2.8.6-47 C:\Users\ASUS\.gradle\caches\8.13\transforms\f329c2277a060e3b8e70ab6f9bbb18dc\transformed\lifecycle-viewmodel-savedstate-2.8.6\res
-com.example.wassupguard.app-material-icons-extended-release-48 C:\Users\ASUS\.gradle\caches\8.13\transforms\f5af06af44f8c7b486d4df7d7041bb24\transformed\material-icons-extended-release\res
-com.example.wassupguard.app-ui-text-release-49 C:\Users\ASUS\.gradle\caches\8.13\transforms\f5c43654e3e0ad7d364dba5e39f7016b\transformed\ui-text-release\res
-com.example.wassupguard.app-ui-release-50 C:\Users\ASUS\.gradle\caches\8.13\transforms\fe70717c9e5c8521b6af75d121788616\transformed\ui-release\res
-com.example.wassupguard.app-pngs-51 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\build\generated\res\pngs\debug
-com.example.wassupguard.app-resValues-52 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\build\generated\res\resValues\debug
-com.example.wassupguard.app-updated_navigation_xml-53 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\build\generated\updated_navigation_xml\debug
-com.example.wassupguard.app-packageDebugResources-54 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.wassupguard.app-packageDebugResources-55 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.wassupguard.app-debug-56 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.wassupguard.app-debug-57 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\src\debug\res
-com.example.wassupguard.app-main-58 C:\Users\ASUS\AndroidStudioProjects\WassupGuard\app\src\main\res
+com.example.wassupguard.app-core-runtime-2.2.0-0 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\020680d5a5f37c32b909b8c71667f28b\transformed\core-runtime-2.2.0\res
+com.example.wassupguard.app-core-ktx-1.13.1-1 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\074ae9d06c208b548b0120d8473bc86b\transformed\core-ktx-1.13.1\res
+com.example.wassupguard.app-customview-poolingcontainer-1.0.0-2 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\1854d123bb105f0bbd6b76b097f49df9\transformed\customview-poolingcontainer-1.0.0\res
+com.example.wassupguard.app-activity-1.9.1-3 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\2cdfdfdb49e36ac8a77b07db0815134c\transformed\activity-1.9.1\res
+com.example.wassupguard.app-navigation-common-ktx-2.7.7-4 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\2f19f71bb7b383095d1306a16c7ac76b\transformed\navigation-common-ktx-2.7.7\res
+com.example.wassupguard.app-ui-util-release-5 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\32fc56dccbcbc3c6caedbc7ab16bc040\transformed\ui-util-release\res
+com.example.wassupguard.app-room-runtime-2.6.1-6 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\3389df71aa2b8aa2430533dd3b2cfab3\transformed\room-runtime-2.6.1\res
+com.example.wassupguard.app-activity-compose-1.9.1-7 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\3738a4a705d4c0384d9fd73453c11af9\transformed\activity-compose-1.9.1\res
+com.example.wassupguard.app-navigation-runtime-ktx-2.7.7-8 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\43bd03590a9039a4dc786ebfdce691fb\transformed\navigation-runtime-ktx-2.7.7\res
+com.example.wassupguard.app-foundation-release-9 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\4ee97471da8a5e3233842a83ee7ed6fc\transformed\foundation-release\res
+com.example.wassupguard.app-work-runtime-2.9.0-10 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\53ee64506954ec1db4e5c372f39bb6a4\transformed\work-runtime-2.9.0\res
+com.example.wassupguard.app-startup-runtime-1.1.1-11 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\611ba9a90fbd43a399e5041fa78d9a20\transformed\startup-runtime-1.1.1\res
+com.example.wassupguard.app-activity-ktx-1.9.1-12 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\6155502b3ffd87e28be2e3a8a7fccb45\transformed\activity-ktx-1.9.1\res
+com.example.wassupguard.app-ui-tooling-preview-release-13 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\6771ec7bd005c4978ee1f6ff4c4dd57b\transformed\ui-tooling-preview-release\res
+com.example.wassupguard.app-savedstate-ktx-1.2.1-14 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\6d8bb19d9c22a8f2e59a332600e8d95c\transformed\savedstate-ktx-1.2.1\res
+com.example.wassupguard.app-lifecycle-runtime-release-15 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\6f9870ca4e99ddb7eaba57a62bdd6afa\transformed\lifecycle-runtime-release\res
+com.example.wassupguard.app-lifecycle-viewmodel-release-16 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\70281f70e50ba4c333d0f1dc5c2d39e9\transformed\lifecycle-viewmodel-release\res
+com.example.wassupguard.app-navigation-compose-2.7.7-17 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\70d91f4c544c35547ee734650646f58e\transformed\navigation-compose-2.7.7\res
+com.example.wassupguard.app-core-1.13.1-18 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\739112cdf6d37873f7ea92c5ffc2fded\transformed\core-1.13.1\res
+com.example.wassupguard.app-savedstate-1.2.1-19 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\73d6c371238b6a98e22c814fb47c7f36\transformed\savedstate-1.2.1\res
+com.example.wassupguard.app-ui-graphics-release-20 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\7f203929aa6a7fafef0871e9c65eccdf\transformed\ui-graphics-release\res
+com.example.wassupguard.app-animation-core-release-21 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\7f36e4be18392032a5f59409ba52d3db\transformed\animation-core-release\res
+com.example.wassupguard.app-emoji2-1.3.0-22 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\81ed7d89a3a1d18d5e1dec60122e7cac\transformed\emoji2-1.3.0\res
+com.example.wassupguard.app-material-icons-core-release-23 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\83382b21cadd3bb8fabcfe176814df84\transformed\material-icons-core-release\res
+com.example.wassupguard.app-sqlite-2.4.0-24 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\83423ae10dc800bc376f1d982cf984f6\transformed\sqlite-2.4.0\res
+com.example.wassupguard.app-ui-tooling-data-release-25 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\85f29642ed5fd1675e1e3119e0efbc50\transformed\ui-tooling-data-release\res
+com.example.wassupguard.app-runtime-release-26 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\86ba4fc03f28d4358644d5258506d244\transformed\runtime-release\res
+com.example.wassupguard.app-animation-release-27 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\881553bbf6d30f82003694b5ae51d220\transformed\animation-release\res
+com.example.wassupguard.app-lifecycle-process-2.8.6-28 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\8da6a9f3ab1758827fa4e8cea24772e0\transformed\lifecycle-process-2.8.6\res
+com.example.wassupguard.app-navigation-runtime-2.7.7-29 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\96b5f58cd388d3cbb4a2d60c9ed0c63e\transformed\navigation-runtime-2.7.7\res
+com.example.wassupguard.app-ui-geometry-release-30 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\97e4697beaeb467c734b688459c0fabd\transformed\ui-geometry-release\res
+com.example.wassupguard.app-ui-test-manifest-1.6.8-31 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\9a661dd3cf43091b9ad0ffd1ebe4a38e\transformed\ui-test-manifest-1.6.8\res
+com.example.wassupguard.app-lifecycle-runtime-compose-release-32 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\9c0c89192bba10978d9dc2c64066099e\transformed\lifecycle-runtime-compose-release\res
+com.example.wassupguard.app-ui-unit-release-33 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\a05aa88cedf11b32e91cd5a4958657de\transformed\ui-unit-release\res
+com.example.wassupguard.app-lifecycle-livedata-core-2.8.6-34 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\a1bb775c7a10bb38e473e14872fb22c5\transformed\lifecycle-livedata-core-2.8.6\res
+com.example.wassupguard.app-material-release-35 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\a31416fe4712b3b8d5a94521f4a4e970\transformed\material-release\res
+com.example.wassupguard.app-foundation-layout-release-36 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\a49eaad96c9c315dd9ee7f86fdb575e8\transformed\foundation-layout-release\res
+com.example.wassupguard.app-lifecycle-runtime-ktx-release-37 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\aa1f8de1badd515aa72caeda959c5bcc\transformed\lifecycle-runtime-ktx-release\res
+com.example.wassupguard.app-ui-tooling-release-38 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\acb4fb17d3262754bde764b7ebb6bd2d\transformed\ui-tooling-release\res
+com.example.wassupguard.app-work-runtime-ktx-2.9.0-39 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\c72cb2e803c794a1f1464afec975cb1e\transformed\work-runtime-ktx-2.9.0\res
+com.example.wassupguard.app-annotation-experimental-1.4.1-40 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\c7e4aa721794c2783b946ce9730d688d\transformed\annotation-experimental-1.4.1\res
+com.example.wassupguard.app-lifecycle-viewmodel-compose-release-41 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\cb5847b2b49170919044ca2e955647b6\transformed\lifecycle-viewmodel-compose-release\res
+com.example.wassupguard.app-sqlite-framework-2.4.0-42 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\cd4470a18ba1bb68f48cb2574323fa67\transformed\sqlite-framework-2.4.0\res
+com.example.wassupguard.app-material3-release-43 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\cebfdc37c650550eb3a8ce8e5d78d273\transformed\material3-release\res
+com.example.wassupguard.app-navigation-common-2.7.7-44 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\d118aed00be6a6c5187d8f8c24184af5\transformed\navigation-common-2.7.7\res
+com.example.wassupguard.app-lifecycle-viewmodel-ktx-2.8.6-45 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\d5cdcfce649295a2077defac8fb06559\transformed\lifecycle-viewmodel-ktx-2.8.6\res
+com.example.wassupguard.app-lifecycle-livedata-core-ktx-2.8.6-46 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\da09ffdf7fd37f17e02422e74db3494a\transformed\lifecycle-livedata-core-ktx-2.8.6\res
+com.example.wassupguard.app-profileinstaller-1.3.1-47 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\df4a074f542fdc3824af47a8ce64b3d2\transformed\profileinstaller-1.3.1\res
+com.example.wassupguard.app-lifecycle-service-2.8.6-48 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\e400f44f9fbfa4a5547d2f5f0615b7c8\transformed\lifecycle-service-2.8.6\res
+com.example.wassupguard.app-runtime-saveable-release-49 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\e5d2b825f6672a8f303f9e1bb6650042\transformed\runtime-saveable-release\res
+com.example.wassupguard.app-lifecycle-livedata-2.8.6-50 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\ea4a9454a94c4c00a82d616af0dd831a\transformed\lifecycle-livedata-2.8.6\res
+com.example.wassupguard.app-material-ripple-release-51 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\ec394bcbdecb12e91b73d9a941e1cd0c\transformed\material-ripple-release\res
+com.example.wassupguard.app-room-ktx-2.6.1-52 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\efcd3b8224d1e844acb742435b36067c\transformed\room-ktx-2.6.1\res
+com.example.wassupguard.app-lifecycle-viewmodel-savedstate-2.8.6-53 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\f329c2277a060e3b8e70ab6f9bbb18dc\transformed\lifecycle-viewmodel-savedstate-2.8.6\res
+com.example.wassupguard.app-material-icons-extended-release-54 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\f5af06af44f8c7b486d4df7d7041bb24\transformed\material-icons-extended-release\res
+com.example.wassupguard.app-ui-text-release-55 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\f5c43654e3e0ad7d364dba5e39f7016b\transformed\ui-text-release\res
+com.example.wassupguard.app-ui-release-56 C:\Users\Shrinidhi J\.gradle\caches\8.13\transforms\fe70717c9e5c8521b6af75d121788616\transformed\ui-release\res
+com.example.wassupguard.app-pngs-57 C:\Users\Shrinidhi J\Wassup-Guard\app\build\generated\res\pngs\debug
+com.example.wassupguard.app-resValues-58 C:\Users\Shrinidhi J\Wassup-Guard\app\build\generated\res\resValues\debug
+com.example.wassupguard.app-updated_navigation_xml-59 C:\Users\Shrinidhi J\Wassup-Guard\app\build\generated\updated_navigation_xml\debug
+com.example.wassupguard.app-packageDebugResources-60 C:\Users\Shrinidhi J\Wassup-Guard\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.wassupguard.app-packageDebugResources-61 C:\Users\Shrinidhi J\Wassup-Guard\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.wassupguard.app-debug-62 C:\Users\Shrinidhi J\Wassup-Guard\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.wassupguard.app-debug-63 C:\Users\Shrinidhi J\Wassup-Guard\app\src\debug\res
+com.example.wassupguard.app-main-64 C:\Users\Shrinidhi J\Wassup-Guard\app\src\main\res

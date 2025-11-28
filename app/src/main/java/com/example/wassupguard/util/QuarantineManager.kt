@@ -1,6 +1,7 @@
 package com.example.wassupguard.util
 
 import android.content.Context
+import android.os.Environment
 import android.util.Log
 import java.io.File
 import java.io.FileInputStream
@@ -19,6 +20,7 @@ import java.io.FileOutputStream
 object QuarantineManager {
     private const val TAG = "QuarantineManager"
     private const val QUARANTINE_FOLDER = "quarantine"
+    private const val RESTORED_FOLDER = "restored"
 
     /**
      * Get the quarantine directory (creates if doesn't exist)
@@ -75,11 +77,36 @@ object QuarantineManager {
     }
 
     /**
+     * Restore a file from quarantine to a public folder.
+     */
+    fun restoreFile(file: File): File? {
+        val restoredDir = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), RESTORED_FOLDER)
+        if (!restoredDir.exists()) {
+            restoredDir.mkdirs()
+        }
+        val restoredFile = File(restoredDir, file.name.substringAfter("_"))
+
+        return try {
+            FileInputStream(file).use { input ->
+                FileOutputStream(restoredFile).use { output ->
+                    input.copyTo(output)
+                }
+            }
+            file.delete()
+            restoredFile
+        } catch (e: Exception) {
+            Log.e(TAG, "Error restoring file: ${file.path}", e)
+            null
+        }
+    }
+
+
+    /**
      * Check if a file is in quarantine
      */
     fun isQuarantined(file: File, context: Context): Boolean {
         val quarantineDir = getQuarantineDir(context)
-        return file.path.startsWith(quarantineDir.path)
+        return file.parentFile == quarantineDir
     }
 
     /**
@@ -90,4 +117,3 @@ object QuarantineManager {
         return quarantineDir.listFiles()?.filter { it.isFile } ?: emptyList()
     }
 }
-

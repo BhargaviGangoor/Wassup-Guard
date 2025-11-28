@@ -2,13 +2,17 @@ package com.example.wassupguard.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val WhatsAppPrimary = Color(0xFF075E54)
-val WhatsAppPrimaryDark = Color(0xFF064C43)
-val WhatsAppAccent = Color(0xFF25D366)
-val WhatsAppAccentDark = Color(0xFF1EB457)
-val WhatsAppSurface = Color(0xFF0B141A)
-val WhatsAppSurfaceLight = Color(0xFF15232B)
-val WhatsAppCard = Color(0xFF132027)
-val WhatsAppDanger = Color(0xFFEF5350)
-val WhatsAppWarning = Color(0xFFFFB74D)
-val WhatsAppSafe = Color(0xFF81C784)
+val Slate800 = Color(0xFF1E293B)
+val Slate700 = Color(0xFF334155)
+val Slate500 = Color(0xFF64748B)
+val Slate300 = Color(0xFFCBD5E1)
+
+val Green500 = Color(0xFF22C55E)
+val Green400 = Color(0xFF4ADE80)
+val Green300 = Color(0xFF86EFAC)
+
+val Red500 = Color(0xFFEF4444)
+val Red400 = Color(0xFFF87171)
+
+val Yellow500 = Color(0xFFEAB308)
+val Yellow400 = Color(0xFFFACC15)

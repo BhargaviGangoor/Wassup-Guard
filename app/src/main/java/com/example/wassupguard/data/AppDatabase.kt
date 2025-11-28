@@ -11,8 +11,8 @@ import com.example.wassupguard.data.entity.Signature
 
 @Database(
     entities = [Signature::class, ScanLog::class],
-    version = 1,
-    exportSchema = true
+    version = 2,
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun signatureDao(): SignatureDao
@@ -28,12 +28,12 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "wassupguard_database"
-                ).build()
+                )
+                .fallbackToDestructiveMigration()
+                .build()
                 INSTANCE = instance
                 instance
             }
         }
     }
 }
-
-

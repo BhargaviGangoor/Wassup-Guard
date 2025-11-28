@@ -31,11 +31,11 @@ object SafeScoreCalculator {
         }
 
         val stats = response.data.attributes.lastAnalysisStats
-        val harmless = stats?.harmless ?: 0
-        val malicious = stats?.malicious ?: 0
-        val suspicious = stats?.suspicious ?: 0
-        val undetected = stats?.undetected ?: 0
-        val timeout = stats?.timeout ?: 0
+        val harmless = stats.harmless ?: 0
+        val malicious = stats.malicious ?: 0
+        val suspicious = stats.suspicious ?: 0
+        val undetected = stats.undetected ?: 0
+        val timeout = stats.timeout ?: 0
 
         val totalScans = harmless + malicious + suspicious + undetected + timeout
 

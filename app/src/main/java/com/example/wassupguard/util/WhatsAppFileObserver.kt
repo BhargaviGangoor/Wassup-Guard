@@ -17,7 +17,7 @@ import java.io.File
 class WhatsAppFileObserver(
     private val path: String,
     private val onFileCreated: (File) -> Unit
-) : FileObserver(path, CREATE or CLOSE_WRITE) {
+) : FileObserver(File(path), CREATE or CLOSE_WRITE) {
 
     private val TAG = "WhatsAppFileObserver"
     

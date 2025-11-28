@@ -9,56 +9,42 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = WhatsAppAccent,
-    onPrimary = Color.Black,
-    primaryContainer = WhatsAppPrimary,
-    onPrimaryContainer = Color.White,
-    secondary = WhatsAppAccentDark,
-    onSecondary = Color.Black,
-    background = WhatsAppSurface,
-    onBackground = Color(0xFFECEFF1),
-    surface = WhatsAppSurfaceLight,
-    onSurface = Color(0xFFECEFF1),
-    surfaceVariant = WhatsAppCard,
-    onSurfaceVariant = Color(0xFFB2CCD6),
-    error = WhatsAppDanger
-)
-
-private val LightColorScheme = lightColorScheme(
-    primary = WhatsAppPrimary,
-    onPrimary = Color.White,
-    primaryContainer = WhatsAppAccent,
-    onPrimaryContainer = Color.Black,
-    secondary = WhatsAppAccentDark,
-    onSecondary = Color.White,
-    background = Color(0xFFE5F7F1),
-    onBackground = Color(0xFF041A15),
-    surface = Color(0xFFF4FFFB),
-    onSurface = Color(0xFF041A15),
-    surfaceVariant = Color(0xFFE0F2F1),
-    onSurfaceVariant = Color(0xFF11332D),
-    error = WhatsAppDanger
+    primary = Green400,
+    onPrimary = Slate800,
+    primaryContainer = Green500,
+    onPrimaryContainer = Slate800,
+    secondary = Slate300,
+    onSecondary = Slate800,
+    background = Slate800,
+    onBackground = Slate300,
+    surface = Slate700,
+    onSurface = Slate300,
+    surfaceVariant = Slate500,
+    onSurfaceVariant = Slate300,
+    error = Red400,
+    onError = Slate800
 )
 
 @Composable
 fun WassupGuardTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    darkTheme: Boolean = true, // Force dark theme
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+    val colorScheme = DarkColorScheme
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as Activity).window
+            window.statusBarColor = colorScheme.primary.toArgb()
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
     }
 
     MaterialTheme(

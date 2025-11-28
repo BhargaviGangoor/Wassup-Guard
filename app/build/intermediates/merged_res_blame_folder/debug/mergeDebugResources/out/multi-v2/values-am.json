@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.wassupguard.app-mergeDebugResources-53:/values-am/values-am.xml",
+            "outputFile": "com.example.wassupguard.app-mergeDebugResources-59:/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\8.13\\transforms\\fe70717c9e5c8521b6af75d121788616\\transformed\\ui-release\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\Shrinidhi J\\.gradle\\caches\\8.13\\transforms\\fe70717c9e5c8521b6af75d121788616\\transformed\\ui-release\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\8.13\\transforms\\739112cdf6d37873f7ea92c5ffc2fded\\transformed\\core-1.13.1\\res\\values-am\\values-am.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,148,248,345,444,540,642,742",
-                        "endColumns": "92,99,96,98,95,101,99,100",
-                        "endOffsets": "143,243,340,439,535,637,737,838"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,79",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,198,298,395,494,590,692,7688",
-                        "endColumns": "92,99,96,98,95,101,99,100",
-                        "endOffsets": "193,293,390,489,585,687,787,7784"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\8.13\\transforms\\4ee97471da8a5e3233842a83ee7ed6fc\\transformed\\foundation-release\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\Shrinidhi J\\.gradle\\caches\\8.13\\transforms\\4ee97471da8a5e3233842a83ee7ed6fc\\transformed\\foundation-release\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\8.13\\transforms\\cebfdc37c650550eb3a8ce8e5d78d273\\transformed\\material3-release\\res\\values-am\\values-am.xml",
+                    "source": "C:\\Users\\Shrinidhi J\\.gradle\\caches\\8.13\\transforms\\739112cdf6d37873f7ea92c5ffc2fded\\transformed\\core-1.13.1\\res\\values-am\\values-am.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,148,248,345,444,540,642,742",
+                        "endColumns": "92,99,96,98,95,101,99,100",
+                        "endOffsets": "143,243,340,439,535,637,737,838"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,79",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,198,298,395,494,590,692,7688",
+                        "endColumns": "92,99,96,98,95,101,99,100",
+                        "endOffsets": "193,293,390,489,585,687,787,7784"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Shrinidhi J\\.gradle\\caches\\8.13\\transforms\\cebfdc37c650550eb3a8ce8e5d78d273\\transformed\\material3-release\\res\\values-am\\values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

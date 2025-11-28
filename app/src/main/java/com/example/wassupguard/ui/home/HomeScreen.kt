@@ -1,6 +1,7 @@
 package com.example.wassupguard.ui.home
 
 import android.Manifest
+import android.content.Intent
 import android.os.Build
 import android.text.format.DateFormat
 import android.text.format.DateUtils
@@ -24,16 +25,17 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.BugReport
+import androidx.compose.material.icons.rounded.Folder
 import androidx.compose.material.icons.rounded.History
+import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.material.icons.rounded.Shield
 import androidx.compose.material.icons.rounded.Warning
-import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -53,15 +55,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.wassupguard.data.entity.ScanLog
+import com.example.wassupguard.util.safety.SafetyTip
 import kotlinx.coroutines.launch
 import java.util.Locale
-import com.example.wassupguard.util.safety.SafetyTip
 
 @Composable
 fun HomeRoute(
@@ -71,6 +74,21 @@ fun HomeRoute(
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+
+    val directorySelectorLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocumentTree(),
+        onResult = { uri ->
+            if (uri != null) {
+                val contentResolver = context.contentResolver
+                contentResolver.takePersistableUriPermission(
+                    uri,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
+                viewModel.onDirectorySelected(uri.toString())
+            }
+        }
+    )
 
     LaunchedEffect(uiState.statusMessage) {
         if (uiState.statusMessage.isNotBlank()) {
@@ -89,6 +107,7 @@ fun HomeRoute(
             state = uiState,
             onScanNow = { viewModel.runQuickScan() },
             onBackgroundToggle = { viewModel.toggleBackgroundProtection(it) },
+            onSelectFolder = { directorySelectorLauncher.launch(null) },
             modifier = Modifier
                 .padding(padding)
                 .fillMaxSize()
@@ -101,6 +120,7 @@ fun HomeScreen(
     state: HomeUiState,
     onScanNow: () -> Unit,
     onBackgroundToggle: (Boolean) -> Unit,
+    onSelectFolder: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val notificationLauncher = rememberNotificationPermission()
@@ -115,6 +135,12 @@ fun HomeScreen(
             .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        if (state.isFolderSelectionRequired) {
+            item {
+                FolderSelectionCard(onSelectFolder = onSelectFolder)
+            }
+        }
+
         item {
             HeroCard(
                 lastScanTimestamp = state.lastScanTimestamp,
@@ -141,6 +167,45 @@ fun HomeScreen(
         }
         item {
             RecentScansSection(scanLogs = state.scanLogs)
+        }
+    }
+}
+
+@Composable
+private fun FolderSelectionCard(onSelectFolder: () -> Unit, modifier: Modifier = Modifier) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(24.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            Text(
+                text = "Action Required",
+                style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                color = MaterialTheme.colorScheme.onErrorContainer
+            )
+            Text(
+                text = "To start scanning, please select your main WhatsApp folder (usually 'Android/media/com.whatsapp').",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onErrorContainer.copy(alpha = 0.8f)
+            )
+            Button(
+                onClick = onSelectFolder,
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.onError),
+                modifier = Modifier.align(Alignment.End)
+            ) {
+                Icon(
+                    imageVector = Icons.Rounded.Folder,
+                    contentDescription = null
+                )
+                Spacer(modifier = Modifier.size(8.dp))
+                Text(text = "Select Folder")
+            }
         }
     }
 }
@@ -273,7 +338,7 @@ private fun GuardActions(
                 Spacer(modifier = Modifier.size(8.dp))
                 Text(text = if (isScheduling) "Scheduling..." else "Scan WhatsApp Now")
             }
-            Divider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
+            HorizontalDivider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -399,7 +464,7 @@ private fun RecentScansSection(
                 scanLogs.forEachIndexed { index, log ->
                     ScanLogRow(log)
                     if (index != scanLogs.lastIndex) {
-                        Divider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
+                        HorizontalDivider(color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
                     }
                 }
             }
